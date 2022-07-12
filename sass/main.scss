@@ -1,0 +1,26 @@
+@import "./utils/vars";
+@import "./utils/visually-hidden";
+@import "./utils/mixins";
+
+@import "./base/reset";
+@import "./base/common";
+
+
+@import "./components/container";
+@import "./components/btn";
+@import "./components/logo";
+
+@import "./section/header";
+@import "./section/hero";
+@import "./section/action";
+@import "./section/galary";
+@import "./section/colleagues";
+@import "./section/clients";
+@import "./section/products";
+@import "./section/footer";
+@import "./section/modal";
+
+
+
+
+
