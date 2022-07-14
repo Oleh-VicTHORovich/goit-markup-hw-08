@@ -9,8 +9,16 @@
     margin-top: 20px;
 }
 
+
 .address__item:not(:last-child) {
     margin-bottom: 9px;
+}
+
+.address__item {
+    text-align: center;
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .address__link {
@@ -49,15 +57,61 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
+    text-align: center;
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
+
 .footer-contakt {
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin-bottom: 60px;
+    // justify-content: center;
+    // align-items: center;
+
+    @include tablet {
+        margin-bottom: 0;                
+    }
+
+    @include desktop {
+       margin-right: 70px;  
+       align-items: flex-start;
+    //    justify-content: flex-start;
+
+    }
+    
 }
 
 .footer-flex {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
+}
+
+.contact-soc {    
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet {
+        display: flex;
+        align-items: baseline;
+        
+    }
+
+    @include desktop {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        margin-left: 0;
+    }
+
+    
 }
 
 .soc {
@@ -98,6 +152,7 @@
 }
 
 .mailing__title {
+    text-align: center;
     /* font-family: 'Roboto';
     font-style: normal; */
     font-weight: 700;
@@ -107,6 +162,10 @@
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
+
+    @include desktop {
+        text-align: start;
+    }
 }
 
 .mailing-form__input {
@@ -119,7 +178,7 @@
     background: transparent;
     /* outline-color: var(--accent-color); */
     padding-left: 16px;
-    margin-right: 12px;
+    
 
     font-weight: 400;
     font-size: 16px;
@@ -127,6 +186,12 @@
 
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 20px;
+
+    @include desktop {
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
 
     &::placeholder {
         font-weight: 400;
@@ -146,12 +211,21 @@
 }
 
 .mailing-form {
-    display: flex;
-    align-items: center;
+   
+    @include desktop {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .mailing {
+    margin-top: 60px;
     margin-left: auto;
+    margin-right: auto;
+
+    @include desktop {
+        margin-right: 0;
+    }
 }
 
 .mailing-form__btn-dscr {

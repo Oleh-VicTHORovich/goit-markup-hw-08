@@ -7,6 +7,7 @@
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.2);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
 }
 
 .modal {
@@ -14,12 +15,36 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    width: 528px;
+    width: 450px;
     min-height: 581px;
     background-color: #ffffff;
     border-radius: 4px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding: 40px;
+
+    @media screen and (max-width: 450px) {
+        width: 100%;        
+    }
+
+    @include tablet {
+        width: 450px;
+    }
+    
+
+    @include desktop {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 528px;
+        min-height: 581px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 40px;
+    }
+
+
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0);
 
@@ -161,7 +186,7 @@
     /* font-family: 'Roboto';
     font-style: normal;
     font-weight: 400; */
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     /* identical to box height, or 171% */
     letter-spacing: 0.03em;
@@ -169,6 +194,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include desktop {
+        font-size: 14px;
+    }
 }
 
 .check-text a {
@@ -190,6 +219,12 @@
         background-color: var(--accent-color);
         border: none;
     }
+}
+
+.check-text {
+    display: flex;
+    flex-wrap: wrap; 
+    // justify-content: start;
 }
 
 .check-icon {

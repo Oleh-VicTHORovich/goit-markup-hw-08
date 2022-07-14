@@ -48,6 +48,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 body {
@@ -76,12 +77,12 @@ body {
 }
 @media screen and (min-width: 480px) {
   .container {
-    max-width: 448px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -253,7 +254,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-bg-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-bg-tablet-2x.jpg);
     height: 400px;
   }
 }
@@ -652,18 +653,25 @@ body {
 }
 
 .produkts-lowlist {
-  outline: orange;
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
-  margin-left: -30px;
+  gap: 30px;
 }
 .produkts-lowlist .produkts-item {
-  width: 370px;
+  width: 100%;
+  flex-grow: 1;
   /* height: 404px; */
   /* flex-basis: calc(100% / 3 - 30px); */
-  margin-top: 30px;
-  margin-left: 30px;
+}
+@media screen and (min-width: 768px) {
+  .produkts-lowlist .produkts-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .produkts-lowlist .produkts-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .produkt-top-wrap {
@@ -697,6 +705,8 @@ body {
 
 .produkt-link {
   display: block;
+  flex-direction: column;
+  height: 100%;
 }
 .produkt-link:hover, .produkt-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -713,8 +723,17 @@ body {
 
 .produkts-highlist {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .produkts-highlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .produkts-btn {
@@ -740,7 +759,16 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.produkts-highlist-item:not(:last-child) {
+.produkts-highlist-item:nth-last-child(n+3) {
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .produkts-highlist-item:nth-last-child(n+3) {
+    margin-top: 0;
+  }
+}
+
+.produkts-highlist-item {
   margin-right: 8px;
 }
 
@@ -778,6 +806,15 @@ body {
 
 .address__item:not(:last-child) {
   margin-bottom: 9px;
+}
+
+.address__item {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .address__item {
+    text-align: start;
+  }
 }
 
 .address__link {
@@ -823,15 +860,56 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .soc__title {
+    text-align: start;
+  }
 }
 
 .footer-contakt {
-  margin-right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-contakt {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-contakt {
+    margin-right: 70px;
+    align-items: flex-start;
+  }
 }
 
 .footer-flex {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
+}
+
+.contact-soc {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .contact-soc {
+    display: flex;
+    align-items: baseline;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-soc {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-left: 0;
+  }
 }
 
 .soc {
@@ -870,6 +948,7 @@ body {
 }
 
 .mailing__title {
+  text-align: center;
   /* font-family: 'Roboto';
   font-style: normal; */
   font-weight: 700;
@@ -879,6 +958,11 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .mailing__title {
+    text-align: start;
+  }
 }
 
 .mailing-form__input {
@@ -891,12 +975,18 @@ body {
   background: transparent;
   /* outline-color: var(--accent-color); */
   padding-left: 16px;
-  margin-right: 12px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .mailing-form__input {
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
 }
 .mailing-form__input::placeholder {
   font-weight: 400;
@@ -912,13 +1002,22 @@ body {
   background-color: rgba(240, 37, 37, 0.5);
 }
 
-.mailing-form {
-  display: flex;
-  align-items: center;
+@media screen and (min-width: 1200px) {
+  .mailing-form {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .mailing {
+  margin-top: 60px;
   margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 1200px) {
+  .mailing {
+    margin-right: 0;
+  }
 }
 
 .mailing-form__btn-dscr {
@@ -943,6 +1042,7 @@ body {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
 }
 
 .modal {
@@ -950,12 +1050,36 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
+  width: 450px;
   min-height: 581px;
   background-color: #ffffff;
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+}
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 528px;
+    min-height: 581px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+  }
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0);
@@ -1087,7 +1211,7 @@ body {
   /* font-family: 'Roboto';
   font-style: normal;
   font-weight: 400; */
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   /* identical to box height, or 171% */
   letter-spacing: 0.03em;
@@ -1095,6 +1219,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+  }
 }
 
 .check-text a {
@@ -1116,6 +1245,11 @@ body {
 .input-check:checked + .check-text span {
   background-color: var(--accent-color);
   border: none;
+}
+
+.check-text {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .check-icon {
