@@ -87,8 +87,13 @@
 
 .produkt-link {
     display: block;
-    flex-direction: column;
-    height: 100%;
+    // flex-direction: column;
+    // height: 100%;
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
 
     &:hover,
     &:focus {
@@ -105,6 +110,10 @@
 .produkts-kard {
     padding: 20px 24px 20px 24px;
     border: 1px solid #EEEEEE;
+
+    @include tablet {
+        flex-grow: 1;
+    }
     
     /* border-top: none;   */
 }

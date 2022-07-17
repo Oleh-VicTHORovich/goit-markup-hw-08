@@ -90,6 +90,9 @@
 .footer-flex {
     display: flex;
     flex-wrap: wrap;
+    @include desktop {
+        align-items: baseline
+    }
 }
 
 .contact-soc {    

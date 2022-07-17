@@ -436,7 +436,7 @@ body {
 } */
 .hero {
   background: var(--bg-hero-section);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-bg-mobile.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mobile.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -448,18 +448,18 @@ body {
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-bg-mobile-2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mobile-2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-bg-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tablet.jpg);
     height: 400px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero-bg-tablet-2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tablet-2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
@@ -909,8 +909,13 @@ body {
 
 .produkt-link {
   display: block;
-  flex-direction: column;
-  height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .produkt-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 .produkt-link:hover, .produkt-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -923,6 +928,11 @@ body {
   padding: 20px 24px 20px 24px;
   border: 1px solid #EEEEEE;
   /* border-top: none;   */
+}
+@media screen and (min-width: 768px) {
+  .produkts-kard {
+    flex-grow: 1;
+  }
 }
 
 .produkts-highlist {
@@ -1098,6 +1108,11 @@ body {
 .footer-flex {
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 1200px) {
+  .footer-flex {
+    align-items: baseline;
+  }
 }
 
 .contact-soc {
