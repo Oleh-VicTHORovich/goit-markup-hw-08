@@ -58,25 +58,24 @@
     color: #FFFFFF;
     margin-bottom: 20px;
     text-align: center;
-
     @include desktop {
         text-align: start;
+
     }
 }
 
 
+
 .footer-contakt {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+    flex-direction: column;   
     margin-bottom: 60px;
-    // justify-content: center;
-    // align-items: center;
+    justify-content: center;
+    align-items: center;
 
     @include tablet {
-        margin-bottom: 0;                
+        margin-bottom: 0; 
+        margin-right: 165px;
     }
 
     @include desktop {
@@ -91,7 +90,7 @@
 .footer-flex {
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
+    /
 }
 
 .contact-soc {    
@@ -100,8 +99,9 @@
 
     @include tablet {
         display: flex;
-        align-items: baseline;
         
+        
+        align-items: baseline; 
     }
 
     @include desktop {
@@ -225,6 +225,7 @@
 
     @include desktop {
         margin-right: 0;
+        margin-top: 0;
     }
 }
 
@@ -240,5 +241,5 @@
 
 .mailing-form__send-btn-icon {
     margin-left: 10px;
-
+    
 }

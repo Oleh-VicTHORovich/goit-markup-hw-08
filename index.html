@@ -22,7 +22,7 @@
     </head>
 
     <body>
-        <!-- <header class="header">
+        <header class="header">
             <div class="container">
                 <nav class="nav">
                     <a href="./index.html" class="nav__logo-style logo logo--color-dark link"><span style="color: #2196F3">Web</span>Studio</a>
@@ -39,7 +39,7 @@
                     <li class="contact__item">
     
                         <a href="mailto:info@devstudio.com" class="contact__link link">
-                            <svg class="contact__icon " width="16" height="12">
+                            <svg class="contact__icon contact__icon-email-dim">
                                 <use class="" href="./images/icon/icons-second.svg#icon-envelope"></use>
                             </svg>
                             <span class="contact__email ">info@devstudio.com</span>
@@ -51,7 +51,7 @@
                     <li class="contact__item">
     
                         <a href="tel:+380961111111" class="contact__link link">
-                            <svg class="contact__icon" width="10" height="16">
+                            <svg class="contact__icon contact__icon-tel-dim" width="10" height="16">
                                 <use class="" href="./images/icon/icons-second.svg#icon-smartphone"></use>
                             </svg>
                             <span class="contact__tel">+38 096 111 11 11</span>
@@ -59,8 +59,63 @@
     
                     </li>
                 </ul>
+                <button type="button" class="menu-open-btn">
+                    <svg class="menu-open-icon" width="24" height="16">
+                        <use class="" href="./images/icon/iconth-eighth.svg#icon-mobile-menu-open"></use>
+                    </svg>
+                </button>
             </div>
-        </header> -->
+            
+            <div class="mob-menu is-hidden">                
+                <button type="button" class="menu-close-btn" >
+                    <svg class="menu-close-icon" width="19" height="19">
+                        <use class="" href="./images/icon/iconth-eighth.svg#icon-mobile-menu-close"></use>
+                    </svg>
+                </button>
+
+                <ul class="mob-menu__list list">
+                    <li class="mob-menu__item"><a href="./index.html" class="mob-menu__link link">Студия</a></li>
+                    <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link link">Портфолио</a></li>
+                    <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакты</a></li>
+                </ul>
+
+                <div class="contack-soc">
+                    <ul class="mob-menu__contact list">
+                    
+                        <li class="mob-menu__contact-item">
+                            <a href="tel:+380961111111" class="mob-menu__contact-link link">
+                                <span class="mob-menu__contact-tel">+38 096 111 11 11</span>
+                            </a>
+                        </li>
+                    
+                        <li class="mob-menu__contact-item">
+                            <a href="mailto:info@devstudio.com" class="mob-menu__contact-link link">
+                                <span class="mob-menu-contact-email ">info@devstudio.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <ul class="mob-menu__soc list">
+                    
+                        <li class="mob-menu__soc-item">
+                            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-menu__soc-link link">Instagram</a>
+                        </li>
+                    
+                        <li class="mob-menu__soc-item">
+                            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-menu__soc-link link">Twitter</a>
+                        </li>
+                    
+                        <li class="mob-menu__soc-item">
+                            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-menu__soc-link link">Facebook</a>
+                        </li>
+                    
+                        <li class="mob-menu__soc-item">
+                            <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-menu__soc-link link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>                
+            </div>
+        </header>
     
         <main>
     
@@ -506,6 +561,7 @@
             </div>
         </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/menu.js"></script>
     </body>
     
     </html>

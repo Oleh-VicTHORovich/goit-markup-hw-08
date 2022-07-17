@@ -21,7 +21,7 @@
     </head>
     
     <body>
-        <!-- <header class="header">
+        <header class="header">
             <div class="container">
                 <nav class="nav">
                     <a href="./index.html" class="nav__logo-style logo logo--color-dark link"><span style="color: #2196F3">Web</span>Studio</a>
@@ -58,8 +58,67 @@
                 
                     </li>
                 </ul>
+                <button type="button" class="menu-open-btn">
+                    <svg class="menu-open-icon" width="24" height="16">
+                        <use class="" href="./images/icon/iconth-eighth.svg#icon-mobile-menu-open"></use>
+                    </svg>
+                </button>
             </div>
-        </header> -->
+
+            <div class="mob-menu is-hidden">
+                <button type="button" class="menu-close-btn">
+                    <svg class="menu-close-icon" width="19" height="19">
+                        <use class="" href="./images/icon/iconth-eighth.svg#icon-mobile-menu-close"></use>
+                    </svg>
+                </button>
+            
+                <ul class="mob-menu__list list">
+                    <li class="mob-menu__item"><a href="./index.html" class="mob-menu__link link">Студия</a></li>
+                    <li class="mob-menu__item"><a href="./portfolio.html" class="mob-menu__link link">Портфолио</a></li>
+                    <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакты</a></li>
+                </ul>
+            
+                <div class="contack-soc">
+                    <ul class="mob-menu__contact list">
+            
+                        <li class="mob-menu__contact-item">
+                            <a href="tel:+380961111111" class="mob-menu__contact-link link">
+                                <span class="mob-menu__contact-tel">+38 096 111 11 11</span>
+                            </a>
+                        </li>
+            
+                        <li class="mob-menu__contact-item">
+                            <a href="mailto:info@devstudio.com" class="mob-menu__contact-link link">
+                                <span class="mob-menu-contact-email ">info@devstudio.com</span>
+                            </a>
+                        </li>
+                    </ul>
+            
+                    <ul class="mob-menu__soc list">
+            
+                        <li class="mob-menu__soc-item">
+                            <a href="" target="_blank" rel="noopener noreferrer nofollow"
+                                class="mob-menu__soc-link link">Instagram</a>
+                        </li>
+            
+                        <li class="mob-menu__soc-item">
+                            <a href="" target="_blank" rel="noopener noreferrer nofollow"
+                                class="mob-menu__soc-link link">Twitter</a>
+                        </li>
+            
+                        <li class="mob-menu__soc-item">
+                            <a href="" target="_blank" rel="noopener noreferrer nofollow"
+                                class="mob-menu__soc-link link">Facebook</a>
+                        </li>
+            
+                        <li class="mob-menu__soc-item">
+                            <a href="" target="_blank" rel="noopener noreferrer nofollow"
+                                class="mob-menu__soc-link link">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
         
         <main>
             <!-- Продукция компании-->
@@ -289,66 +348,79 @@
             </section>
         </main>
 
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="container footer-flex">
-                <div class="footer-contakt">
-                    <a href="./index.html" class="logo logo--color-light link"><span style="color: #2196F3">Web</span>Studio</a>
-                    <address class="footer-address">
-                        <ul class="address list">
-                            <li class="address__item"><a href="https://goo.gl/maps/FBzsGnQGYuRuvQxV7" target="_blank"
-                                    rel="noopener noreferrer nofollow" class="address__link link">г. Киев, пр-т Леси Украинки,
-                                    26</a></li>
-                            <li class="address__item"><a href="mailto:info@devstudio.com"
-                                    class="address__email link">info@devstudio.com</a></li>
-                            <li class="address__item"><a href="tel:+380961111111" class="address__tel link">+38 096 111 11 11</a>
+                <div class="contact-soc">
+                    <div class="footer-contakt">
+                        <a href="./index.html" class="logo logo--color-light link"><span
+                                style="color: #2196F3">Web</span>Studio</a>
+                        <address class="footer-address">
+                            <ul class="address list">
+                                <li class="address__item">
+                                    <a href="https://goo.gl/maps/FBzsGnQGYuRuvQxV7" target="_blank"
+                                        rel="noopener noreferrer nofollow" class="address__link link">г. Киев, пр-т Леси
+                                        Украинки,
+                                        26
+                                    </a>
+                                </li>
+        
+                                <li class="address__item">
+                                    <a href="mailto:info@devstudio.com" class="address__email link">
+                                        info@devstudio.com
+                                    </a>
+                                </li>
+        
+                                <li class="address__item">
+                                    <a href="tel:+380961111111" class="address__tel link">
+                                        +38 096 111 11 11
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                    </div>
+        
+                    <div class="soc-connect">
+                        <p class="soc__title">присоединяйтесь</p>
+        
+                        <ul class="soc list">
+                            <li class="soc__item">
+                                <a href="" class="soc__link link">
+                                    <svg class="soc__icon" width="20" height="20">
+                                        <use class="" href="./images/icon/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="soc__item">
+                                <a href="" class="soc__link link">
+                                    <svg class="soc__icon" width="20" height="20">
+                                        <use class="" href="./images/icon/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="soc__item">
+                                <a href="" class="soc__link link">
+                                    <svg class="soc__icon" width="20" height="20">
+                                        <use class="" href="./images/icon/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="soc__item">
+                                <a href="" class="soc__link link">
+                                    <svg class="soc__icon" width="20" height="20">
+                                        <use class="" href="./images/icon/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
                             </li>
                         </ul>
-                    </address>
+                    </div>
                 </div>
         
-                <div class="soc-connect">
-                    <h3 class="soc__title">присоединяйтесь</h3>
         
-                    <ul class="soc list">
-                        <li class="soc__item">
-                            <a href="" class="soc__link link">
-                                <svg class="soc__icon" width="20" height="20">
-                                    <use class="" href="./images/icon/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="soc__item">
-                            <a href="" class="soc__link link">
-                                <svg class="soc__icon" width="20" height="20">
-                                    <use class="" href="./images/icon/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="soc__item">
-                            <a href="" class="soc__link link">
-                                <svg class="soc__icon" width="20" height="20">
-                                    <use class="" href="./images/icon/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="soc__item">
-                            <a href="" class="soc__link link">
-                                <svg class="soc__icon" width="20" height="20">
-                                    <use class="" href="./images/icon/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-        
-                </div>
-
                 <div class="mailing">
                     <p class="mailing__title">Подпишитесь на рассылку</p>
                     <form class="mailing-form">
-                        <input type="email" name="user-email" class="mailing-form__input" required 
-                            placeholder="E-mail" 
-                        />
-                        
+                        <input type="email" name="user-email" class="mailing-form__input" required placeholder="E-mail" />
+        
                         <button type="submit" class="btn mailing-form__btn-dscr">Подписаться
                             <svg class="mailing-form__send-btn-icon" width="24" height="24">
                                 <use class="" href="./images/icon/icons-sixth.svg#icon-send"></use>
@@ -357,7 +429,8 @@
                     </form>
                 </div>
             </div>
-        </footer> -->
+        </footer>
+        <script src="./js/menu.js"></script>
     </body>
 
 </html>
