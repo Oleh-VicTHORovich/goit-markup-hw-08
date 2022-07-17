@@ -1,6 +1,12 @@
 .produkts {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
+
 }
 
 .produkts-lowlist {
@@ -10,7 +16,7 @@
    
     .produkts-item {
         width: 100%;
-        
+                
 
         @include tablet {
             width: calc((100% - 30px) / 2);
@@ -108,13 +114,15 @@
     flex-wrap: wrap;
     
     // justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 
     @include tablet {
-        display: flex;
-        flex-wrap: wrap;
         gap: 8px;
         justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    @include desktop {
         margin-bottom: 50px;
     }
 }

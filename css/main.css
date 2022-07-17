@@ -847,8 +847,14 @@ body {
 }
 
 .produkts {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .produkts {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .produkts-lowlist {
@@ -922,14 +928,17 @@ body {
 .produkts-highlist {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .produkts-highlist {
-    display: flex;
-    flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .produkts-highlist {
     margin-bottom: 50px;
   }
 }
