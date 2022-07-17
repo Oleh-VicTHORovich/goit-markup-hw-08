@@ -90,9 +90,7 @@
 .footer-flex {
     display: flex;
     flex-wrap: wrap;
-    @include desktop {
-        align-items: baseline
-    }
+    align-items: baseline;
 }
 
 .contact-soc {    
@@ -173,7 +171,7 @@
 .mailing-form__input {
     /* box-sizing: border-box;    
     position: absolute; */
-    width: 358px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -189,6 +187,13 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 20px;
+
+    @include tablet {
+        width: 358px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     @include desktop {
         margin-right: 12px;
@@ -222,12 +227,20 @@
 
 .mailing {
     margin-top: 60px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
+
+    @include tablet {
+        margin-top: 60px;
+        // margin-left: auto;
+        // margin-right: auto;
+    }
 
     @include desktop {
-        margin-right: 0;
+        // margin-right: 0;
         margin-top: 0;
+        max-width: 570px;
     }
 }
 
