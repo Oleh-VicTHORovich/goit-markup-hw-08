@@ -858,7 +858,6 @@ body {
 }
 .produkts-lowlist .produkts-item {
   width: 100%;
-  flex-grow: 1;
   /* height: 404px; */
   /* flex-basis: calc(100% / 3 - 30px); */
 }
@@ -1090,7 +1089,6 @@ body {
 .footer-flex {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
 }
 
 .contact-soc {

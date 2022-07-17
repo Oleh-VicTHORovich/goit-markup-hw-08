@@ -10,7 +10,7 @@
    
     .produkts-item {
         width: 100%;
-        flex-grow: 1;
+        
 
         @include tablet {
             width: calc((100% - 30px) / 2);
